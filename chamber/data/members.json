@@ -1,0 +1,112 @@
+{
+    "businesses": [
+        {
+            "name": "Acme Corporation",
+            "address": "123 Business St, Rome, IT",
+            "phone": "+39 06 11223344",
+            "website": "https://www.acmecorp.com",
+            "image": "./images/img1.webp",
+            "membershipLevel": "Gold",
+            "tagline": "Innovating for a better future"
+        },
+        {
+            "name": "Rome Bistro",
+            "address": "456 Food Ave, Rome, IT",
+            "phone": "+39 06 99887766",
+            "website": "https://www.romebistro.it",
+            "image": "./images/img2.webp",
+            "membershipLevel": "Silver",
+            "tagline": "Authentic Italian Cuisine"
+        },
+        {
+            "name": "Tech Solutions Rome",
+            "address": "789 Tech Rd, Rome, IT",
+            "phone": "+39 06 55443322",
+            "website": "https://www.techsol.it",
+            "image": "./images/img3.webp",
+            "membershipLevel": "Bronze",
+            "tagline": "Your IT partner in Rome"
+        },
+        {
+            "name": "Roma Gelato Artigianale",
+            "address": "Via del Corso 10, Rome, IT",
+            "phone": "+39 06 98765432",
+            "website": "https://www.romagelato.com",
+            "image": "./images/img4.webp",
+            "membershipLevel": "Silver",
+            "tagline": "The true taste of Roman tradition."
+        },
+        {
+            "name": "Colosseum Tours & Travel",
+            "address": "Piazza del Colosseo 5, Rome, IT",
+            "phone": "+39 06 22334455",
+            "website": "https://www.colosseumtours.com",
+            "image": "./images/img5.webp",
+            "membershipLevel": "Gold",
+            "tagline": "Discover the Eternal City with expert guides."
+        },
+        {
+            "name": "Trastevere Pizzeria",
+            "address": "Vicolo del Cinque 20, Rome, IT",
+            "phone": "+39 06 33445566",
+            "website": "https://www.trasteverepizzeria.com",
+            "image": "./images/img6.webp",
+            "membershipLevel": "Bronze",
+            "tagline": "Authentic Roman pizza, a taste of home."
+        },
+        {
+            "name": "Vatican Bookstore & Gifts",
+            "address": "Via della Conciliazione 1, Rome, IT",
+            "phone": "+39 06 44556677",
+            "website": "https://www.vaticanbookstore.com",
+            "image": "./images/img7.webp",
+            "membershipLevel": "Silver",
+            "tagline": "Books and gifts inspired by the heart of Rome."
+        },
+        {
+            "name": "Borghese Gardens Florist",
+            "address": "Via Pinciana 10, Rome, IT",
+            "phone": "+39 06 33449900",
+            "website": "https://www.borgheseflorist.com",
+            "image": "./images/img8.webp",
+            "membershipLevel": "Silver",
+            "tagline": "Exquisite floral designs for every occasion."
+        },
+        {
+            "name": "Cinecittà Film Workshop",
+            "address": "Via Tuscolana 1055, Rome, IT",
+            "phone": "+39 06 77881122",
+            "website": "https://www.cinecittaworkshop.it",
+            "image": "./images/img9.webp",
+            "membershipLevel": "Bronze",
+            "tagline": "Unleashing the next generation of filmmakers."
+        },
+        {
+            "name": "Monte Mario Viewpoint Cafe",
+            "address": "Via di Monte Mario 40, Rome, IT",
+            "phone": "+39 06 90190190",
+            "website": "https://www.montemariocafe.com",
+            "image": "./images/img10.webp",
+            "membershipLevel": "Bronze",
+            "tagline": "Enjoy coffee with panoramic views of Rome."
+        },
+        {
+            "name": "Castel Sant'Angelo Bookstore",
+            "address": "Lungotevere Castello 50, Rome, IT",
+            "phone": "+39 06 01201201",
+            "website": "https://www.castelbookstore.com",
+            "image": "./images/img11.webp",
+            "membershipLevel": "Silver",
+            "tagline": "History and literature meet by the Tiber."
+        },
+        {
+            "name": "Eur Modern Art Museum",
+            "address": "Piazzale delle Nazioni Unite 1, Rome, IT",
+            "phone": "+39 06 78978978",
+            "website": "https://www.eurmodernart.com",
+            "image": "./images/img12.webp",
+            "membershipLevel": "Gold",
+            "tagline": "Showcasing the best of contemporary Italian art."
+        }
+    ]
+}
