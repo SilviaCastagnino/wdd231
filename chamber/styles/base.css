@@ -11,19 +11,26 @@
     --light-secondary-color: #4c583e;
     --light-accent1-color: #2c3424;
     --light-accent2-color: #daded8;
-    --light-accent3-color: #768064;
+    --light-accent3-color: #3A4230;
     --light-card-bg: #f9f9f9;
+    --light-card-title-color: #2c3424;
+    --light-weather-h2-bg: #4b4d39;
+    --light-button-text: white;
+
 
     /* Dark */
     --dark-text-color: #e0e0e0;
-    --dark-primary-color: #2c3424;
+    --dark-primary-color: #1a2015;
     --dark-secondary-color: #3b4233;
-    --dark-accent1-color: #4c583e;
-    --dark-accent2-color: #1a1a1a;
-    --dark-accent3-color: #5c664b;
+    --dark-accent1-color: #1F251A;
+    --dark-accent2-color: #0d0d0d;
+    --dark-accent3-color: #2B3024;
     --dark-card-bg: #2a2a2a;
+    --dark-card-title-color: #B2C79E;
+    --dark-weather-h2-bg: #1a2015;
+    --dark-button-text: white;
 
-    /* Default (Light)*/
+    /* Default (Light) */
     --text-color: var(--light-text-color);
     --primary-color: var(--light-primary-color);
     --secondary-color: var(--light-secondary-color);
@@ -31,6 +38,10 @@
     --background-color: var(--light-accent2-color);
     --accent3-color: var(--light-accent3-color);
     --card-background: var(--light-card-bg);
+    --card-title-color: var(--light-card-title-color);
+    --weather-h2-background: var(--light-weather-h2-bg);
+    --button-text-color: var(--light-button-text);
+
 
     --heading-font: "Raleway", serif;
     --text-font: "Inter", serif;
@@ -45,6 +56,9 @@ body[data-theme='dark'] {
     --background-color: var(--dark-accent2-color);
     --accent3-color: var(--dark-accent3-color);
     --card-background: var(--dark-card-bg);
+    --card-title-color: var(--dark-card-title-color);
+    --weather-h2-background: var(--dark-weather-h2-bg);
+    --button-text-color: var(--dark-button-text);
 }
 
 h1,
@@ -149,15 +163,14 @@ header nav .nav-links li a {
     outline: none;
     border: none;
     background: var(--accent1-color);
-    color: white;
+    color: var(--button-text-color);
     display: block;
     text-align: center;
 }
 
-header nav .nav-links li a:hover,
-header nav .nav-links li a.active {
+header nav .nav-links li a:hover {
     background: var(--accent3-color);
-    color: white;
+    color: var(--button-text-color);
     transition: all 0.3s ease-in-out;
 }
 
@@ -181,14 +194,14 @@ header .hamburger {
     outline: none;
     border: none;
     background: var(--accent1-color);
-    color: #fff;
+    color: var(--button-text-color);
     display: none;
     margin-right: 7px;
 }
 
 .theme button:hover {
     background: var(--accent3-color);
-    color: #fff;
+    color: var(--button-text-color);
     transition: all 0.3s ease-in-out;
 }
 
@@ -294,7 +307,7 @@ main {
 .event-card h3 {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
-    color: var(--accent1-color);
+    color: var(--card-title-color);
 }
 
 .event-card p {
@@ -312,7 +325,7 @@ main {
 }
 
 .weather_card h2 {
-    background-color: var(--accent1-color);
+    background-color: var(--weather-h2-background);
     color: white;
     padding: 0.8rem;
     margin: -1rem -1rem 1rem -1rem;
@@ -376,7 +389,7 @@ main {
 }
 
 .spotlights h2 {
-    background-color: var(--accent1-color);
+    background-color: var(--weather-h2-background);
     color: white;
     padding: 0.8rem;
     margin: -1rem -1rem 1rem -1rem;
@@ -427,7 +440,7 @@ main {
 .business-card h3 {
     font-family: 'Raleway', serif;
     font-size: 1.3rem;
-    color: var(--accent1-color);
+    color: var(--card-title-color);
     margin: 0.8rem 0 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -516,7 +529,7 @@ footer p {
 }
 
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
     header nav {
         padding: 1rem 2rem;
     }
