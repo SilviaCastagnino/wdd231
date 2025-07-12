@@ -528,6 +528,20 @@ footer p {
     margin: 0;
 }
 
+.hero-home .cta h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+section h1 {
+    font-size: 2em;
+}
+
+nav h1 {
+    font-size: 1.2rem;
+    color: white;
+}
 
 @media (min-width: 700px) {
     header nav {
@@ -627,6 +641,10 @@ footer p {
 
     footer .social-icons {
         margin-top: 0;
+    }
+
+    .hero-home .cta h1 {
+        font-size: 2.5rem;
     }
 }
 
@@ -736,5 +754,9 @@ footer p {
 
     footer .footer__logo p {
         font-size: 0.9rem;
+    }
+
+    .hero-home .cta h1 {
+        font-size: 3rem;
     }
 }
