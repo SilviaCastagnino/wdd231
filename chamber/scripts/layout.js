@@ -1,19 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
+
     const singleColumnBtn = document.getElementById('singleColumn');
     const threeColumnsBtn = document.getElementById('threeColumns');
     const spotlightsContainer = document.getElementById('spotlightsContainer');
 
-
     setLayout('threeColumns');
-
 
     singleColumnBtn.addEventListener('click', () => setLayout('singleColumn'));
     threeColumnsBtn.addEventListener('click', () => setLayout('threeColumns'));
 
     function setLayout(layoutType) {
-
         spotlightsContainer.classList.remove('single-column', 'three-columns');
-
         if (layoutType === 'singleColumn') {
             spotlightsContainer.classList.add('single-column');
             singleColumnBtn.classList.add('active');
@@ -25,16 +22,19 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-
-    loadSampleBusinesses();
+    loadBusinesses();
 });
 
-function loadSampleBusinesses() {
-    const businesses = [
-
-    ];
-
-    renderBusinesses(businesses);
+async function loadBusinesses() {
+    try {
+        const response = await fetch('./data/members.json');
+        const data = await response.json();
+        renderBusinesses(data.businesses);
+    } catch (error) {
+        console.error('Error loading businesses:', error);
+        renderBusinesses([
+        ]);
+    }
 }
 
 function renderBusinesses(businesses) {
