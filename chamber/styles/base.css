@@ -988,6 +988,22 @@ nav h1 {
 }
 
 @media (min-width: 1000px) {
+
+    article h1,
+    aside h1,
+    nav h1,
+    section h1 {
+
+        font-size: 2em;
+
+    }
+
+
+    .hero-home .cta h1 {
+        font-size: 3rem;
+    }
+
+
     header nav {
         padding: 1rem 0;
     }
