@@ -271,23 +271,37 @@ main {
     margin-bottom: 2rem;
 }
 
+
 .card {
     border-radius: 8px;
-    padding: 1rem;
+    padding: 0;
     background-color: var(--card-background);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, color 0.3s;
+    overflow: hidden;
 }
 
 .card h2 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
     text-align: center;
     color: var(--text-color);
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+
+.events-section {
+    grid-area: events;
+}
+
+.events-section h2 {
+    padding-bottom: 10px;
 }
 
 .events-section {
     grid-area: events;
+    padding: 1rem;
 }
 
 .events-section .events-container {
@@ -324,17 +338,28 @@ main {
     grid-area: forecast;
 }
 
+.forecast-day {
+    font-weight: bold;
+}
+
 .weather_card h2 {
     background-color: var(--weather-h2-background);
     color: white;
-    padding: 0.8rem;
-    margin: -1rem -1rem 1rem -1rem;
+    padding: 0.8rem 1rem;
     font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 0;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #currentWeather .weather_content {
+    padding: 1rem;
+    padding-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -354,48 +379,260 @@ main {
     font-weight: bold;
 }
 
-#forecast #weatherForecast {
+#high,
+#low,
+#humidity {
+    font-size: 1rem;
+    margin: 0.3rem 0;
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
-#forecast .forecast-day-card {
+#forecast {
+    padding: 0;
+}
+
+#forecast h2 {
+    background-color: var(--weather-h2-background);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#weatherForecast {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    padding: 1.5rem;
+    padding-top: 1rem;
+
+}
+
+.forecast-day-card {
     background-color: var(--background-color);
-    padding: 0.8rem;
-    border-radius: 5px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    transition: background-color 0.3s, color 0.3s;
+    transition: all 0.3s ease;
+    text-align: center;
+    gap: 0.4rem;
 }
 
-#forecast .forecast-day-card p {
+.forecast-day-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-day-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+}
+
+.forecast-day-card .forecast-day {
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--card-title-color);
+    margin-bottom: 0.3rem;
+}
+
+.forecast-day-card .forecast-temp {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.forecast-day-card .forecast-desc {
+    font-size: 0.85rem;
+    text-transform: capitalize;
+    margin-bottom: 0.3rem;
+}
+
+.forecast-day-card .forecast-minmax {
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 100%;
+}
+
+/*Color Weather forecast Icons*/
+.forecast-icon {
+
+    filter:
+        /*brightness(0.9) contrast(1.2) saturate(0.5)*/
+        drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.4));
+    width: 50px;
+    height: 50px;
+    transition: all 0.2s ease-in-out;
+}
+
+.forecast-day-card .forecast-icon:hover {
+    transform: none;
+}
+
+/* Layout */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.layout-btn {
+    padding: 0.5rem 1.5rem;
+    background-color: var(--accent1-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.layout-btn.active {
+    background-color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Single Column */
+#spotlightsContainer.single-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#spotlightsContainer.single-column .business-card {
+    width: 100%;
+    max-width: none;
+    display: block;
+    text-align: left;
+    padding: 1.5rem;
+    margin-top: 20px;
+}
+
+
+.directory-section {
+    margin-top: 2rem;
+}
+
+.directory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: white;
+}
+
+.directory-header h2 {
+    color: white;
     margin: 0;
+}
+
+.view-options .view-btn {
+    background-color: var(--accent1-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.view-options .view-btn:hover {
+    background-color: var(--accent3-color);
+}
+
+.view-options .view-btn.active {
+    background-color: var(--accent3-color);
+}
+
+.directory-container {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.directory-container.grid-view {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-content: center;
+}
+
+.directory-container.list-view {
+    grid-template-columns: 1fr;
+}
+
+.directory-container.list-view .business-card {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.directory-container.list-view .business-card img {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+}
+
+.directory-container.list-view .business-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.directory-container.list-view .business-card p {
+    margin: 0.2rem 0;
     font-size: 0.9rem;
-    color: var(--text-color);
+    text-align: left;
+}
+
+.directory-container.list-view .business-card p a {
+    color: var(--accent1-color);
 }
 
 .spotlights {
     border-radius: 8px;
-    padding: 1rem;
+    padding: 0;
     background-color: var(--card-background);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, color 0.3s;
     margin-top: 2rem;
+    overflow: hidden;
 }
 
 .spotlights h2 {
     background-color: var(--weather-h2-background);
     color: white;
-    padding: 0.8rem;
-    margin: -1rem -1rem 1rem -1rem;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
     font-size: 1.2rem;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .spotlights .carousel {
@@ -405,6 +642,8 @@ main {
     justify-content: center;
     gap: 1.5rem;
     align-items: stretch;
+    padding: 1rem;
+    padding-top: 0;
 }
 
 .spotlights img {
@@ -556,6 +795,52 @@ nav h1 {
     margin-bottom: 1.5rem;
 }
 
+#currentWeather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+}
+
+#currentWeather h2 {
+    width: 100%;
+}
+
+.weather_icon {
+    margin: 0.5rem 0;
+}
+
+.weather_icon img {
+    width: 80px;
+    height: 80px;
+}
+
+#description {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+
+#temperature {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+#high,
+#low,
+#humidity {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+
 @media (min-width: 700px) {
     header nav {
         padding: 1rem 2rem;
@@ -663,6 +948,21 @@ nav h1 {
     .hero-home .cta h1 {
         font-size: 2.5rem;
     }
+
+    #currentWeather {
+        min-height: auto;
+    }
+
+    #weatherForecast {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        flex-direction: initial;
+        justify-content: center;
+    }
+
+    .forecast-day-card {
+        flex-direction: column;
+        padding: 1rem;
+    }
 }
 
 @media (min-width: 1000px) {
@@ -727,13 +1027,43 @@ nav h1 {
     }
 
     #forecast {
-        grid-area: forecast;
+        padding: 0;
     }
 
-    #forecast #weatherForecast {
+    #forecast h2 {
+        background-color: var(--weather-h2-background);
+        color: white;
+        padding: 0.8rem 1.5rem;
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 0;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #weatherForecast {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        justify-content: center;
+        padding: 1.5rem;
+        padding-top: 1rem;
+    }
+
+    .forecast-day-card {
+        background-color: var(--background-color);
+        padding: 1rem;
+        border-radius: 8px;
+        display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
+        align-items: center;
+        transition: all 0.3s ease;
+        text-align: center;
+        gap: 0.4rem;
     }
 
     .spotlights {
@@ -779,5 +1109,20 @@ nav h1 {
 
     .hero-home .cta h1 {
         font-size: 3rem;
+    }
+
+    #currentWeather .weather_icon img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #temperature {
+        font-size: 2.5rem;
+    }
+
+    .forecast-day-card {
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 1.5rem;
     }
 }

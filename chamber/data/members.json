@@ -24,7 +24,7 @@
             "phone": "+39 06 55443322",
             "website": "https://www.techsol.it",
             "image": "./images/img3.webp",
-            "membershipLevel": "Bronze",
+            "membershipLevel": "Silver",
             "tagline": "Your IT partner in Rome"
         },
         {
@@ -51,7 +51,7 @@
             "phone": "+39 06 33445566",
             "website": "https://www.trasteverepizzeria.com",
             "image": "./images/img6.webp",
-            "membershipLevel": "Bronze",
+            "membershipLevel": "Gold",
             "tagline": "Authentic Roman pizza, a taste of home."
         },
         {
@@ -78,7 +78,7 @@
             "phone": "+39 06 77881122",
             "website": "https://www.cinecittaworkshop.it",
             "image": "./images/img9.webp",
-            "membershipLevel": "Bronze",
+            "membershipLevel": "Silver",
             "tagline": "Unleashing the next generation of filmmakers."
         },
         {
@@ -87,7 +87,7 @@
             "phone": "+39 06 90190190",
             "website": "https://www.montemariocafe.com",
             "image": "./images/img10.webp",
-            "membershipLevel": "Bronze",
+            "membershipLevel": "Gold",
             "tagline": "Enjoy coffee with panoramic views of Rome."
         },
         {
