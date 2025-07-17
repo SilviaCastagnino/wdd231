@@ -1,7 +1,7 @@
 const myTown = document.querySelector('#town');
 const myDescription = document.querySelector('#description');
 const myTemperature = document.querySelector('#temperature');
-const myGraphic = document.querySelector('#graphic');
+const myGraphic = document.querySelector('#weather_icon');
 const myHigh = document.querySelector('#high');
 const myLow = document.querySelector('#low');
 const myHumidity = document.querySelector('#humidity');
@@ -13,7 +13,7 @@ const myLat = "41.89324563265339"
 const myLong = "12.475499689958006"
 
 
-const myURL = `//api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=metric`
+const myURL = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=metric`
 
 
 async function apiFetch() {
@@ -21,8 +21,7 @@ async function apiFetch() {
         const response = await fetch(myURL);
         if (response.ok) {
             const data = await response.json();
-            console.log(data); // testing only
-            displayResults(data); // uncomment when ready
+            displayResults(data);
             displayForecast(data);
         } else {
             throw Error(await response.text());
@@ -37,8 +36,10 @@ function displayResults(data) {
     myDescription.innerHTML = data.weather[0].description
     myTemperature.innerHTML = `${data.main.temp}&deg;C`
     const iconsrc = `images/weather-icon.svg`
-    myGraphic.setAttribute('SRC', iconsrc)
-    myGraphic.setAttribute('alt', 'data.weather[0].description')
+    myGraphic.innerHTML = `
+        <img src="${iconsrc}" id="graphic" alt="${data.weather[0].description}">
+    `;
+
     myHigh.innerHTML = `High temp: ${data.main.temp_max}&deg;C`
     myLow.innerHTML = `Low temp: ${data.main.temp_min}&deg;C`
     myHumidity.innerHTML = "Humidity: " + data.main.humidity + "%"
