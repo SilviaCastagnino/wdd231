@@ -11,12 +11,12 @@
     --light-secondary-color: #4c583e;
     --light-accent1-color: #2c3424;
     --light-accent2-color: #daded8;
+    /* Background color */
     --light-accent3-color: #3A4230;
     --light-card-bg: #f9f9f9;
     --light-card-title-color: #2c3424;
     --light-weather-h2-bg: #4b4d39;
     --light-button-text: white;
-
 
     /* Dark */
     --dark-text-color: #e0e0e0;
@@ -24,13 +24,14 @@
     --dark-secondary-color: #3b4233;
     --dark-accent1-color: #1F251A;
     --dark-accent2-color: #0d0d0d;
+    /* Background color */
     --dark-accent3-color: #2B3024;
     --dark-card-bg: #2a2a2a;
     --dark-card-title-color: #B2C79E;
     --dark-weather-h2-bg: #1a2015;
     --dark-button-text: white;
 
-    /* Default (Light) */
+    /* Default (Light)  */
     --text-color: var(--light-text-color);
     --primary-color: var(--light-primary-color);
     --secondary-color: var(--light-secondary-color);
@@ -42,12 +43,11 @@
     --weather-h2-background: var(--light-weather-h2-bg);
     --button-text-color: var(--light-button-text);
 
-
     --heading-font: "Raleway", serif;
     --text-font: "Inter", serif;
 }
 
-
+/* Dark  */
 body[data-theme='dark'] {
     --text-color: var(--dark-text-color);
     --primary-color: var(--dark-primary-color);
@@ -61,6 +61,7 @@ body[data-theme='dark'] {
     --button-text-color: var(--dark-button-text);
 }
 
+
 h1,
 h2,
 h3,
@@ -69,6 +70,7 @@ h5,
 h6 {
     font-family: var(--heading-font);
     color: var(--text-color);
+
 }
 
 body {
@@ -78,30 +80,47 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+
 h1 {
     font-size: 2em;
+
     margin: 0.67em 0;
 }
+
 
 article h1,
 aside h1,
 nav h1,
 section h1 {
     font-size: 1.8em;
+
+    margin: 0.67em 0;
+
+}
+
+.hero-home .cta h1 {
+    font-size: 1.8rem;
+
+    margin-bottom: 1rem;
+    color: white;
+
 }
 
 a {
     text-decoration: none;
     color: var(--text-color);
+
 }
 
 li {
     list-style-type: none;
 }
 
+
 header {
     background-color: var(--primary-color);
     color: white;
+
 }
 
 header nav {
@@ -133,7 +152,8 @@ header nav .logo .logo-img img {
     border-radius: 50%;
 }
 
-header nav .logo .logo__text h3 {
+header nav .logo .logo__text b {
+
     font-size: 1.2rem;
     margin: 0;
     color: white;
@@ -208,6 +228,7 @@ header .hamburger {
     background: var(--accent1-color);
     color: var(--button-text-color);
     display: none;
+
     margin-right: 7px;
 }
 
@@ -216,6 +237,7 @@ header .hamburger {
     color: var(--button-text-color);
     transition: all 0.3s ease-in-out;
 }
+
 
 main {
     max-width: 1400px;
@@ -251,12 +273,6 @@ main {
     border-radius: 8px;
 }
 
-.hero-home .cta h1 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: white;
-}
-
 .hero-home .join-btn {
     display: inline-block;
     padding: 0.8rem 1.5rem;
@@ -283,7 +299,6 @@ main {
     margin-bottom: 2rem;
 }
 
-
 .card {
     border-radius: 8px;
     padding: 0;
@@ -302,18 +317,14 @@ main {
     border-radius: 0;
 }
 
-
 .events-section {
     grid-area: events;
+    padding: 1rem;
+
 }
 
 .events-section h2 {
     padding-bottom: 10px;
-}
-
-.events-section {
-    grid-area: events;
-    padding: 1rem;
 }
 
 .events-section .events-container {
@@ -344,14 +355,18 @@ main {
 
 #currentWeather {
     grid-area: weather-now;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+
 }
 
 #forecast {
     grid-area: forecast;
-}
+    padding: 0;
 
-.forecast-day {
-    font-weight: bold;
 }
 
 .weather_card h2 {
@@ -384,11 +399,25 @@ main {
     gap: 0.5rem;
     font-size: 1.5rem;
     font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+#currentWeather .weather_icon img {
+    width: 80px;
+    height: 80px;
+}
+
+#currentWeather #description {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
 }
 
 #currentWeather #temperature {
     font-size: 2.5rem;
     font-weight: bold;
+    margin: 0.5rem 0;
 }
 
 #high,
@@ -402,25 +431,6 @@ main {
     gap: 0.5rem;
 }
 
-#forecast {
-    padding: 0;
-}
-
-#forecast h2 {
-    background-color: var(--weather-h2-background);
-    color: white;
-    padding: 0.8rem 1.5rem;
-    font-size: 1.3rem;
-    text-align: center;
-    margin-bottom: 0;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
-
 #weatherForecast {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -428,7 +438,6 @@ main {
     justify-content: center;
     padding: 1.5rem;
     padding-top: 1rem;
-
 }
 
 .forecast-day-card {
@@ -481,12 +490,9 @@ main {
     width: 100%;
 }
 
-/*Color Weather forecast Icons*/
-.forecast-icon {
 
-    filter:
-        /*brightness(0.9) contrast(1.2) saturate(0.5)*/
-        drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.4));
+.forecast-icon {
+    filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.4));
     width: 50px;
     height: 50px;
     transition: all 0.2s ease-in-out;
@@ -496,7 +502,7 @@ main {
     transform: none;
 }
 
-/* Layout */
+
 .controls {
     display: flex;
     justify-content: center;
@@ -519,7 +525,7 @@ main {
     font-weight: bold;
 }
 
-/* Single Column */
+
 #spotlightsContainer.single-column {
     display: flex;
     flex-direction: column;
@@ -623,6 +629,7 @@ main {
     color: var(--accent1-color);
 }
 
+
 .spotlights {
     border-radius: 8px;
     padding: 0;
@@ -638,6 +645,7 @@ main {
     color: white;
     padding: 0.8rem 1rem;
     margin-bottom: 1rem;
+
     font-size: 1.2rem;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -660,6 +668,7 @@ main {
 
 .spotlights img {
     margin-top: 10px;
+
 }
 
 .business-card {
@@ -707,14 +716,6 @@ main {
     margin-bottom: 1rem;
 }
 
-.business-card p {
-    font-family: var(--text-font);
-    font-size: 1rem;
-    color: var(--text-color);
-    margin: 0.4rem 0;
-    letter-spacing: 0.5px;
-    text-align: center;
-}
 
 footer {
     display: flex;
@@ -759,6 +760,7 @@ footer .footer__logo p {
     gap: 1rem;
     margin-top: 1rem;
     margin-right: 15px;
+
 }
 
 .social-icons img {
@@ -766,7 +768,9 @@ footer .footer__logo p {
     height: 40px;
     transition: transform 0.3s ease;
     margin-right: 5px;
+
     margin-left: 5px;
+
 }
 
 .social-icons img:hover {
@@ -779,81 +783,9 @@ footer p {
     margin: 0;
 }
 
-.hero-home .cta h1 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: white;
-}
-
-section h1 {
-    font-size: 2em;
-}
-
-nav h1 {
-    font-size: 1.2rem;
-    color: white;
-}
-
-.navbar b {
-    font-size: 1.2rem;
-    color: white;
-}
-
-.main-page-title {
-    font-family: var(--heading-font);
-    color: var(--text-color);
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-#currentWeather {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0;
-}
-
-#currentWeather h2 {
-    width: 100%;
-}
-
-.weather_icon {
-    margin: 0.5rem 0;
-}
-
-.weather_icon img {
-    width: 80px;
-    height: 80px;
-}
-
-#description {
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    text-transform: capitalize;
-}
-
-#temperature {
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin: 0.5rem 0;
-}
-
-#high,
-#low,
-#humidity {
-    font-size: 1rem;
-    margin: 0.3rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
 
 @media (min-width: 700px) {
+
 
     article h1,
     aside h1,
@@ -862,6 +794,12 @@ nav h1 {
         font-size: 1.5rem;
         margin: 0.5em 0;
         line-height: 1.3;
+    }
+
+
+    .hero-home .cta h1 {
+        font-size: 2.5rem;
+
     }
 
     header nav {
@@ -873,7 +811,8 @@ nav h1 {
         height: 80px;
     }
 
-    header nav .logo .logo__text h3 {
+    header nav .logo .logo__text b {
+
         font-size: 1.8rem;
     }
 
@@ -925,10 +864,6 @@ nav h1 {
         height: 450px;
     }
 
-    .hero-home .cta h1 {
-        font-size: 2.5rem;
-    }
-
     .home-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
@@ -967,12 +902,9 @@ nav h1 {
         margin-top: 0;
     }
 
-    .hero-home .cta h1 {
-        font-size: 2.5rem;
-    }
-
     #currentWeather {
         min-height: auto;
+
     }
 
     #weatherForecast {
@@ -987,13 +919,14 @@ nav h1 {
     }
 }
 
+
 @media (min-width: 1000px) {
+
 
     article h1,
     aside h1,
     nav h1,
     section h1 {
-
         font-size: 2em;
 
     }
@@ -1002,7 +935,6 @@ nav h1 {
     .hero-home .cta h1 {
         font-size: 3rem;
     }
-
 
     header nav {
         padding: 1rem 0;
@@ -1013,7 +945,8 @@ nav h1 {
         height: 100px;
     }
 
-    header nav .logo .logo__text h3 {
+    header nav .logo .logo__text b {
+        /* Corrected from h3 to b */
         font-size: 2.5rem;
     }
 
@@ -1031,10 +964,6 @@ nav h1 {
 
     .hero-home {
         height: 600px;
-    }
-
-    .hero-home .cta h1 {
-        font-size: 3rem;
     }
 
     .home-grid {
@@ -1064,27 +993,7 @@ nav h1 {
         font-size: 2.5rem;
     }
 
-    #forecast {
-        padding: 0;
-    }
-
-    #forecast h2 {
-        background-color: var(--weather-h2-background);
-        color: white;
-        padding: 0.8rem 1.5rem;
-        font-size: 1.3rem;
-        text-align: center;
-        margin-bottom: 0;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
     #weatherForecast {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
         justify-content: center;
@@ -1093,15 +1002,9 @@ nav h1 {
     }
 
     .forecast-day-card {
-        background-color: var(--background-color);
-        padding: 1rem;
-        border-radius: 8px;
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        transition: all 0.3s ease;
-        text-align: center;
-        gap: 0.4rem;
+        justify-content: center;
+        padding: 1rem 1.5rem;
     }
 
     .spotlights {
@@ -1145,10 +1048,6 @@ nav h1 {
         font-size: 0.9rem;
     }
 
-    .hero-home .cta h1 {
-        font-size: 3rem;
-    }
-
     #currentWeather .weather_icon img {
         width: 100px;
         height: 100px;
@@ -1156,11 +1055,5 @@ nav h1 {
 
     #temperature {
         font-size: 2.5rem;
-    }
-
-    .forecast-day-card {
-        flex-direction: column;
-        justify-content: center;
-        padding: 1rem 1.5rem;
     }
 }
