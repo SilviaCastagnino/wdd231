@@ -507,6 +507,15 @@ main {
     font-weight: bold;
 }
 
+/* Try to fix lighthouse */
+.card h1,
+.spotlights h1,
+.directory-header h1 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+}
+
+
 /* Single Column */
 #spotlightsContainer.single-column {
     display: flex;
