@@ -1,0 +1,52 @@
+{
+    "places": [
+        {
+            "name": "Colosseum",
+            "address": "Piazza del Colosseo, 1, 00184 Roma RM, Italy",
+            "image": "colosseum.webp",
+            "description": "An iconic ancient amphitheater, the largest ever built, famous for gladiatorial contests and public spectacles."
+        },
+        {
+            "name": "Pantheon",
+            "address": "Piazza della Rotonda, 00186 Roma RM, Italy",
+            "image": "pantheon.webp",
+            "description": "A former Roman temple, now a church, renowned for its impressive dome and oculus."
+        },
+        {
+            "name": "Trevi Fountain",
+            "address": "Piazza di Trevi, 00187 Roma RM, Italy",
+            "image": "trevi-fountain.webp",
+            "description": "A magnificent Baroque fountain, famous for the tradition of throwing coins into its waters for a return to Rome."
+        },
+        {
+            "name": "Roman Forum",
+            "address": "Via della Salara Vecchia, 5/6, 00186 Roma RM, Italy",
+            "image": "roman-forum.webp",
+            "description": "The center of ancient Roman public life, with ruins of government buildings, temples, and markets."
+        },
+        {
+            "name": "Vatican City (St. Peter's Basilica)",
+            "address": "Piazza San Pietro, 00120 Città del Vaticano",
+            "image": "vatican.webp",
+            "description": "The smallest independent state in the world, home to the Pope, St. Peter's Basilica, and the Vatican Museums."
+        },
+        {
+            "name": "Castel Sant'Angelo",
+            "address": "Lungotevere Castello, 50, 00193 Roma RM, Italy",
+            "image": "castel-santangelo.webp",
+            "description": "A towering cylindrical building on the right bank of the Tiber, initially Hadrian's mausoleum, later a fortress and castle."
+        },
+        {
+            "name": "Borghese Gallery and Museum",
+            "address": "Piazzale Scipione Borghese, 5, 00197 Roma RM, Italy",
+            "image": "borghese-gallery.webp",
+            "description": "A stunning art gallery housed in the former Villa Borghese Pinciana, featuring Bernini and Caravaggio masterpieces."
+        },
+        {
+            "name": "Piazza Navona",
+            "address": "Piazza Navona, 00186 Roma RM, Italy",
+            "image": "piazza-navona.webp",
+            "description": "A vibrant public square built on the site of the Stadium of Domitian, famous for its fountains, including Bernini's Fountain of Four Rivers."
+        }
+    ]
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Silvia Castagnino">
+    <meta name="description" content="WDD 231 - Silvia Castagnino - Join the Rome Chamber of Commerce">
+    <title>Join Us | Rome Business Directory</title>
+    <meta property="og:title" content="Join Us | Rome Business Directory">
+    <meta property="og:description"
+        content="Apply to join the Rome Chamber of Commerce and connect with local businesses.">
+    <meta property="og:image" content="https://github.com/SilviaCastagnino/wdd231/tree/main/chamber/images">
+    <meta property="og:url" content="https://silviacastagnino.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Raleway:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="scripts/hamburger.js" defer></script>
+    <script src="scripts/theme.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body data-theme="light">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="images/logo.webp" alt="Rome Chamber of Commerce Logo" loading="lazy">
+                </div>
+                <div class="logo__text">
+                    <b>Chamber of Commerce Rome</b>
+                    <p>Chamber of Commerce</p>
+                </div>
+            </div>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+            <div class="theme">
+                <button id="themeToggle" aria-label="Toggle dark/light mode">🌙</button>
+            </div>
+        </nav>
+    </header>
+    <main class="join-page-main">
+        <section class="hero-home">
+            <div class="cta">
+                <h1>Join the Rome Chamber of Commerce</h1>
+                <p>Unlock new opportunities and grow your business within our vibrant community.</p>
+            </div>
+            <picture>
+                <source srcset="images/join-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/join-medium.webp" media="(min-width: 300px)">
+                <img src="images/join-medium.webp" alt="Roman Colosseum" width="1920" height="700" loading="lazy">
+            </picture>
+        </section>
+
+        <div class="join-content">
+            <form method="get" action="thankyou.html" class="membership-form">
+                <h2>Membership Application</h2>
+                <fieldset>
+                    <legend>Applicant Information</legend>
+                    <label class="form-label">First Name*
+                        <input type="text" id="fname" name="fname" title="First Name" autocomplete="given-name"
+                            required>
+                    </label>
+                    <label class="form-label">Last Name*
+                        <input type="text" id="lname" name="lname" title="Last Name" autocomplete="family-name"
+                            required>
+                    </label>
+                    <label class="form-label">Organizational Title
+                        <input type="text" id="orgtitle" name="orgtitle"
+                            title="Organizational Title (7+ alpha, hyphens, spaces)" autocomplete="organization-title"
+                            pattern="[a-zA-Z\s\-]{7,}" placeholder="e.g., Marketing Manager">
+                    </label>
+                    <label class="form-label">Email*
+                        <input type="email" id="email" name="email" title="Email Address" autocomplete="email" required
+                            placeholder="info@example.com">
+                    </label>
+                    <label class="form-label">Mobile Phone*
+                        <input type="tel" id="phone" name="phone" title="Mobile Phone Number" autocomplete="tel"
+                            required>
+                    </label>
+                    <label class="form-label">Business/Organization Name*
+                        <input type="text" id="bizname" name="bizname" title="Business/Organization Name"
+                            autocomplete="organization" required>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Membership Level</legend>
+                    <div class="membership-level-options">
+                        <label class="radio-label">
+                            <input type="radio" name="membership" value="NP" id="np-membership"> NP Membership (No Fee)
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="membership" value="Bronze" id="bronze-membership"> Bronze
+                            Membership
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="membership" value="Silver" id="silver-membership"> Silver
+                            Membership
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="membership" value="Gold" id="gold-membership"> Gold Membership
+                        </label>
+                    </div>
+                    <label class="form-label">Business Description
+                        <textarea id="description" name="description" title="Business Description" rows="5"></textarea>
+                    </label>
+                </fieldset>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+                <input type="submit" value="Join the Chamber" class="submit-button">
+            </form>
+
+            <section class="membership-levels-display">
+                <h2>Membership Benefits</h2>
+                <div class="membership-cards-container">
+                    <div class="membership-card animated-card">
+                        <h3>NP Membership</h3>
+                        <p>For non-profit organizations. No fee.</p>
+                        <button class="details-btn" data-modal="npModal">Learn More</button>
+                    </div>
+                    <div class="membership-card animated-card">
+                        <h3>Bronze Membership</h3>
+                        <p>Entry-level benefits to get started.</p>
+                        <button class="details-btn" data-modal="bronzeModal">Learn More</button>
+                    </div>
+                    <div class="membership-card animated-card">
+                        <h3>Silver Membership</h3>
+                        <p>Increased opportunities and discounts.</p>
+                        <button class="details-btn" data-modal="silverModal">Learn More</button>
+                    </div>
+                    <div class="membership-card animated-card">
+                        <h3>Gold Membership</h3>
+                        <p>Premium benefits, maximum exposure.</p>
+                        <button class="details-btn" data-modal="goldModal">Learn More</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="npModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3>NP Membership Benefits</h3>
+                <p>This membership is exclusively for non-profit organizations and comes with no fee.</p>
+                <ul>
+                    <li>Basic listing in the directory</li>
+                    <li>Access to chamber newsletters</li>
+                    <li>Invitations to select community events</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="bronzeModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3>Bronze Membership Benefits</h3>
+                <p>Our entry-level paid membership, perfect for small businesses.</p>
+                <ul>
+                    <li>Enhanced directory listing</li>
+                    <li>Access to all chamber newsletters and updates</li>
+                    <li>Discounted rates on selected workshops</li>
+                    <li>Opportunity to attend monthly networking events</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="silverModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3>Silver Membership Benefits</h3>
+                <p>A step up, offering more exposure and benefits for growing businesses.</p>
+                <ul>
+                    <li>Premium directory listing with logo</li>
+                    <li>Free access to all chamber newsletters and updates</li>
+                    <li>25% discount on all workshops and training sessions</li>
+                    <li>Priority registration for networking events</li>
+                    <li>Opportunity for a small feature in the monthly newsletter</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="goldModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3>Gold Membership Benefits</h3>
+                <p>Our top-tier membership, designed for established businesses seeking maximum impact.</p>
+                <ul>
+                    <li>Prominent directory listing with logo and direct link</li>
+                    <li>Complimentary access to all workshops, training, and exclusive seminars</li>
+                    <li>VIP access and seating at all networking events</li>
+                    <li>Guaranteed quarterly business spotlight on the homepage</li>
+                    <li>Exclusive invitations to executive roundtables</li>
+                    <li>Dedicated chamber liaison for business support</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer__logo">
+            <div>
+                <img src="images/logo.webp" alt="Rome Chamber of Commerce Logo" width="100" height="100">
+            </div>
+            <div>
+                <h3>Rome Chamber of Commerce</h3>
+                <p>Rome, Lazio, Italy</p>
+                <p>info@romechamber.org</p>
+                <p>(+39) 06 1234 5678</p>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com"><img src="images/facebook.svg" alt="Facebook" width="50" height="50"></a>
+            <a href="https://www.x.com"><img src="images/twitter.svg" alt="Twitter" width="50" height="50"></a>
+            <a href="https://www.linkedin.com"><img src="images/linkedin.svg" alt="LinkedIn" width="50" height="50"></a>
+        </div>
+        <div>
+            <p>WDD231 Class Project</p>
+            <p>❤️⚓Silvia Castagnino⚓❤️</p>
+            <p>©<span id="currentyear">2025</span> | Rome Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
