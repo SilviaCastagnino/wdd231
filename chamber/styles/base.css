@@ -1128,6 +1128,183 @@ footer p {
     background-color: var(--accent1-color);
 }
 
+
+.discover-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: var(--text-font);
+}
+
+.demographics {
+    margin-bottom: 2.5rem;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.demographics h1 {
+    text-align: center;
+    margin-bottom: 1.2rem;
+    color: var(--text-font);
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--accent1-color);
+    padding-bottom: 0.5rem;
+}
+
+.demographics-content {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas:
+        "demographics-card"
+        "visitor-message";
+}
+
+.demographics-card {
+    grid-area: demographics-card;
+}
+
+.visitor-message {
+    grid-area: visitor-message;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.visitor-message h2 {
+    color: var(--text-font);
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+}
+
+#visit-message {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 0.8rem;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.gallery {
+    margin-top: 2rem;
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-font);
+    font-size: 1.8rem;
+    position: relative;
+}
+
+.gallery h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: var(--accent1-color);
+    margin: 0.5rem auto 0;
+}
+
+.gallery-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+
+}
+
+.place-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.place-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--accent1-color);
+}
+
+.card-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.place-card h2 {
+    color: var(--card-title-color);
+    margin: 0 0 0.8rem 0;
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+
+.place-card address {
+    font-style: normal;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.place-card address::before {
+    content: "📍";
+}
+
+.place-card p {
+    color: var(--text-color);
+    margin: 0 0 1.5rem 0;
+    line-height: 1.6;
+    flex-grow: 1;
+    padding-left: 0.5rem;
+}
+
+.place-card figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent1-color);
+    color: var(--button-text-color);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    border: 2px solid transparent;
+}
+
+.learn-more-btn:hover {
+    background-color: var(--accent3-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 @media (min-width: 700px) {
 
     article h1,
@@ -1441,4 +1618,31 @@ footer p {
     .thankyou-card h1 {
         font-size: 3.5rem !important;
     }
+}
+
+@media (min-width: 641px) {
+    .demographics-content {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "demographics-card visitor-message";
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gallery h2 {
+        font-size: 2rem;
+    }
+
+    .place-card h2 {
+        font-size: 1.5rem;
+    }
+
 }

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Silvia Castagnino">
+    <meta name="description" content="WDD 231 - Silvia Castagnino - Discover Rome Chamber of Commerce">
+    <title>Discover | Rome Chamber of Commerce</title>
+    <meta property="og:title" content="Discover | Rome Chamber of Commerce">
+    <meta property="og:description" content="Discover the beauty and business opportunities in Rome, Italy">
+    <meta property="og:image" content="https://github.com/SilviaCastagnino/wdd231/tree/main/chamber/images">
+    <meta property="og:url" content="https://silviacastagnino.github.io/wdd231/chamber/discover.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Raleway:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="scripts/hamburger.js" defer></script>
+    <script src="scripts/theme.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
+</head>
+
+<body data-theme="light">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="images/logo.webp" alt="Rome Chamber of Commerce Logo" loading="lazy">
+                </div>
+                <div class="logo__text">
+                    <b>Chamber of Commerce Rome</b>
+                    <p>Chamber of Commerce</p>
+                </div>
+            </div>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+            <div class="theme">
+                <button id="themeToggle" aria-label="Toggle dark/light mode">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="discover-main">
+        <section class="demographics">
+            <h1>Discover Rome</h1>
+            <div class="demographics-content">
+                <div class="demographics-card">
+                    <h2>Rome Demographics</h2>
+                    <p><strong>Population:</strong> 2.8 million</p>
+                    <p><strong>Area:</strong> 1,285 km² (496.1 sq mi)</p>
+                    <p><strong>Elevation:</strong> 21 m (69 ft)</p>
+                    <p><strong>Founded:</strong> 753 BC</p>
+                    <p><strong>Region:</strong> Lazio</p>
+                    <p><strong>Language:</strong> Italian</p>
+                    <p><strong>Currency:</strong> Euro (€)</p>
+                    <p><strong>Time Zone:</strong> CET (UTC+2)</p>
+                </div>
+
+                <div class="visitor-message">
+                    <h2>Welcome to Rome!</h2>
+                    <p id="visit-message">Loading visit information...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h2>Places of Interest in Rome</h2>
+            <div class="gallery-grid" id="places-container">
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer__logo">
+            <div>
+                <img src="images/logo.webp" alt="Rome Chamber of Commerce Logo" width="100" height="100">
+            </div>
+            <div>
+                <h3>Rome Chamber of Commerce</h3>
+                <p>Rome, Lazio, Italy</p>
+                <p>info@romechamber.org</p>
+                <p>(+39) 06 1234 5678</p>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com"><img src="images/facebook.svg" alt="Facebook" width="50" height="50"></a>
+            <a href="https://www.x.com"><img src="images/twitter.svg" alt="Twitter" width="50" height="50"></a>
+            <a href="https://www.linkedin.com"><img src="images/linkedin.svg" alt="LinkedIn" width="50" height="50"></a>
+        </div>
+        <div>
+            <p>WDD231 Class Project</p>
+            <p>❤️⚓Silvia Castagnino⚓❤️</p>
+            <p>©<span id="currentyear">2025</span> | Rome Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

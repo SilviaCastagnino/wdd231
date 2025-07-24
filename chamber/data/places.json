@@ -4,49 +4,64 @@
             "name": "Colosseum",
             "address": "Piazza del Colosseo, 1, 00184 Roma RM, Italy",
             "image": "colosseum.webp",
-            "description": "An iconic ancient amphitheater, the largest ever built, famous for gladiatorial contests and public spectacles."
+            "description": "An iconic ancient amphitheater, the largest ever built, famous for gladiatorial contests and public spectacles.",
+            "link": "https://en.wikipedia.org/wiki/Colosseum"
         },
         {
             "name": "Pantheon",
             "address": "Piazza della Rotonda, 00186 Roma RM, Italy",
             "image": "pantheon.webp",
-            "description": "A former Roman temple, now a church, renowned for its impressive dome and oculus."
+            "description": "A former Roman temple, now a church, renowned for its impressive dome and oculus.",
+            "link": "https://en.wikipedia.org/wiki/Pantheon,_Rome"
         },
         {
             "name": "Trevi Fountain",
             "address": "Piazza di Trevi, 00187 Roma RM, Italy",
             "image": "trevi-fountain.webp",
-            "description": "A magnificent Baroque fountain, famous for the tradition of throwing coins into its waters for a return to Rome."
+            "description": "A magnificent Baroque fountain, famous for the tradition of throwing coins into its waters for a return to Rome.",
+            "link": "https://en.wikipedia.org/wiki/Trevi_Fountain"
         },
         {
             "name": "Roman Forum",
             "address": "Via della Salara Vecchia, 5/6, 00186 Roma RM, Italy",
             "image": "roman-forum.webp",
-            "description": "The center of ancient Roman public life, with ruins of government buildings, temples, and markets."
+            "description": "The center of ancient Roman public life, with ruins of government buildings, temples, and markets.",
+            "link": "https://en.wikipedia.org/wiki/Roman_Forum"
         },
         {
             "name": "Vatican City (St. Peter's Basilica)",
             "address": "Piazza San Pietro, 00120 Città del Vaticano",
             "image": "vatican.webp",
-            "description": "The smallest independent state in the world, home to the Pope, St. Peter's Basilica, and the Vatican Museums."
+            "description": "The smallest independent state in the world, home to the Pope, St. Peter's Basilica, and the Vatican Museums.",
+            "link": "https://en.wikipedia.org/wiki/St._Peter%27s_Basilica"
         },
         {
             "name": "Castel Sant'Angelo",
             "address": "Lungotevere Castello, 50, 00193 Roma RM, Italy",
             "image": "castel-santangelo.webp",
-            "description": "A towering cylindrical building on the right bank of the Tiber, initially Hadrian's mausoleum, later a fortress and castle."
+            "description": "A towering cylindrical building on the right bank of the Tiber, initially Hadrian's mausoleum, later a fortress and castle.",
+            "link": "https://en.wikipedia.org/wiki/Castel_Sant%27Angelo"
         },
         {
             "name": "Borghese Gallery and Museum",
             "address": "Piazzale Scipione Borghese, 5, 00197 Roma RM, Italy",
             "image": "borghese-gallery.webp",
-            "description": "A stunning art gallery housed in the former Villa Borghese Pinciana, featuring Bernini and Caravaggio masterpieces."
+            "description": "A stunning art gallery housed in the former Villa Borghese Pinciana, featuring Bernini and Caravaggio masterpieces.",
+            "link": "https://en.wikipedia.org/wiki/Galleria_Borghese"
         },
         {
             "name": "Piazza Navona",
             "address": "Piazza Navona, 00186 Roma RM, Italy",
             "image": "piazza-navona.webp",
-            "description": "A vibrant public square built on the site of the Stadium of Domitian, famous for its fountains, including Bernini's Fountain of Four Rivers."
+            "description": "A vibrant public square built on the site of the Stadium of Domitian, famous for its fountains, including Bernini's Fountain of Four Rivers.",
+            "link": "https://en.wikipedia.org/wiki/Piazza_Navona"
+        },
+        {
+            "name": "Villa Borghese",
+            "address": "Piazzale Napoleone I, 00197 Roma RM, Italy",
+            "image": "villa-borghese.webp",
+            "description": "One of Rome's largest and most famous public parks, blending nature, art, and history. It houses the Borghese Gallery and Museum, beautiful gardens, fountains, and other attractions like the Bioparco (zoo) and a replica of Shakespeare's Globe Theatre.",
+            "link": "https://en.wikipedia.org/wiki/Villa_Borghese_gardens"
         }
     ]
 }
