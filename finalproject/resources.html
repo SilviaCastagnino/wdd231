@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore valuable resources and guides to sharpen your web development skills with CodeLearnWise.">
+    <meta name="author" content="Silvia Castagnino">
+    <title>Resources - CodeLearnWise</title>
+    <meta property="og:title" content="Resources | CodeLearnWise">
+    <meta property="og:description"
+        content="Find curated lists of tools, tutorials, and expert advice to advance your coding journey.">
+    <meta property="og:image" content="https://silviacastagnino.github.io/wdd231/finalproject/images/logo.webp">
+    <meta property="og:url" content="https://silviacastagnino.github.io/wdd231/finalproject/resources.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles/base.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Raleway:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/fetch-resources.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <picture>
+            <source srcset="images/logo.webp" media="(min-width: 1000px)">
+            <source srcset="images/logo.webp" media="(min-width: 500px)">
+            <img src="images/logo.webp" alt="CodeLearnWise logo" loading="lazy" width="100" height="70">
+        </picture>
+        <h1>CodeLearnWise</h1>
+
+        <button id="menu-button" aria-expanded="false" aria-controls="main-navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="hamburger-icon"></span>
+            <span class="hamburger-icon"></span>
+            <span class="hamburger-icon"></span>
+        </button>
+        <nav>
+            <ul id="main-navigation" class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html" class="active">Resources</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Our Curated Resources</h2>
+        <p>Here you'll find a growing collection of valuable resources, tools, and insights to help you on your web
+            development journey. We handpick content to ensure it's practical, up-to-date, and genuinely helpful.</p>
+
+        <section class="video-resource">
+            <h3>How Long Does It Take to Learn to Code?</h3>
+            <div class="video-resource-inner">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/5MgBikgcWnY" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <p>This video, while not giving a direct answer in terms of specific hours for programming, offers an
+                illuminating perspective on learning new skills. The speaker suggests that to go from knowing nothing to
+                being "reasonably good" at a new skill, approximately **20 hours of focused, deliberate practice** are
+                needed [00:08:49]. This concept is applicable to any skill, from language learning to drawing, and thus
+                also to programming.</p>
+            <p>We chose this video because it demystifies the idea that learning to code requires years of intense study
+                before seeing results. It emphasizes the importance of intentional practice and consistency, rather than
+                just the sheer quantity of time. This message is fundamental for anyone wanting to become proficient in
+                computer science: it's not an endless path, but a journey where every hour of focused practice brings
+                you closer to mastery. It encourages you to start, to dedicate those initial "20 hours" to break through
+                the initial barrier and build a solid foundation, showing that competence is achievable with the right
+                approach.</p>
+        </section>
+
+        <section class="resource-category">
+            <h3>Documentation</h3>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> - Comprehensive
+                    documentation for web technologies.</li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a> - Tutorials and references for
+                    web development languages.</li>
+                <li><a href="https://docs.github.com/en" target="_blank">GitHub Docs</a> - Documentation for using Git
+                    and GitHub.</li>
+            </ul>
+        </section>
+
+        <section class="resource-category">
+            <h3>Recommended Tools</h3>
+            <ul>
+                <li><a href="https://code.visualstudio.com/" target="_blank">VS Code</a> - A popular, free, and powerful
+                    code editor.</li>
+                <li><a href="https://git-scm.com/" target="_blank">Git</a> - Version control system essential for
+                    collaborative development.</li>
+                <li><a href="https://www.figma.com/" target="_blank">Figma</a> - A collaborative interface design tool.
+                </li>
+            </ul>
+        </section>
+
+        <section class="resource-category">
+            <h3>Tutorials & Courses</h3>
+            <ul>
+                <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a> - Free, interactive coding
+                    courses and certifications.</li>
+                <li><a href="https://www.udemy.com/" target="_blank">Udemy</a> - Online courses on a wide range of
+                    topics, including web development.</li>
+                <li><a href="https://www.coursera.org/" target="_blank">Coursera</a> - Online courses and degrees from
+                    top universities and companies.</li>
+                <li><a href="https://skills.build/" target="_blank">IBM SkillsBuild</a> - Free courses and learning
+                    paths in tech.</li>
+                <li><a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a> - Free, open-source
+                    curriculum for web dev.</li>
+                <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a> - Free courses on basic
+                    programming and more.</li>
+                <li><a href="https://www.edx.org/" target="_blank">edX</a> - Online courses from universities, many free
+                    to audit.</li>
+                <li><a href="https://www.codecademy.com/" target="_blank">Codecademy</a> - Interactive coding lessons
+                    (freemium model).</li>
+            </ul>
+        </section>
+
+        <section class="resource-category">
+            <h3>Community & Support</h3>
+            <ul>
+                <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a> - A question and answer site
+                    for professional and enthusiast programmers.</li>
+                <li><a href="https://www.reddit.com/r/webdev/" target="_blank">Reddit WebDev</a> - A community for web
+                    developers on Reddit.</li>
+                <li><a href="https://dev.to/" target="_blank">DEV Community</a> - A community of software developers
+                    writing articles and sharing ideas.</li>
+                <li><a href="https://discord.com/invite/programming" target="_blank">Programming Discord Servers</a> -
+                    Join online communities for real-time
+                    support and networking.</li>
+            </ul>
+        </section>
+
+        <hr>
+        <section class="tips-section">
+            <h2>Coding Tips & Insights</h2>
+            <div id="dynamic-tips-container">
+                <p>Loading tips...</p>
+            </div>
+            <p class="error-message" style="display:none; color: red; text-align: center; margin-top: 1rem;">
+                Failed to load tips at the moment. Please try again later.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>©<span id="currentyear"></span> | ❤️⚓Silvia Castagnino⚓❤️ | CodeLearnWise</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

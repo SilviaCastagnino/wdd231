@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="CodeLearnWise: Sharpen your web development skills with practical guides, trusted resources, and a supportive community.">
+    <meta name="author" content="Silvia Castagnino">
+    <title>CodeLearnWise - Sharpen Your Web Development Skills</title>
+    <meta property="og:title" content="CodeLearnWise - Master Web Development">
+    <meta property="og:description"
+        content="Unlock your potential in web development. Find guides, tutorials, and a community to help you succeed.">
+    <meta property="og:image" content="https://silviacastagnino.github.io/wdd231/finalproject/images/logo.webp">
+    <meta property="og:url" content="https://silviacastagnino.github.io/wdd231/finalproject/index.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles/base.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Raleway:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/modal.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <picture>
+            <source srcset="images/logo.webp" media="(min-width: 1000px)">
+            <source srcset="images/logo.webp" media="(min-width: 500px)">
+            <img src="images/logo.webp" alt="CodeLearnWise logo" loading="lazy" width="100" height="70">
+        </picture>
+        <h1>CodeLearnWise</h1>
+
+        <button id="menu-button" aria-expanded="false" aria-controls="main-navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="hamburger-icon"></span>
+            <span class="hamburger-icon"></span>
+            <span class="hamburger-icon"></span>
+        </button>
+        <nav>
+            <ul id="main-navigation" class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Master Your Web Development Journey</h2>
+                <p>Welcome to CodeLearnWise, your dedicated partner in mastering the art and science of web development.
+                    Whether you're a beginner taking your first steps or an experienced coder looking to sharpen your
+                    skills, we provide comprehensive guides, trusted resources, and a supportive community to help you
+                    succeed.</p>
+                <a href="resources.html" class="cta-button">Explore Resources</a>
+            </div>
+        </section>
+
+        <section class="info-grid">
+            <div class="info-card">
+                <h3>Practical Guides</h3>
+                <p>Dive into step-by-step tutorials and best practices for HTML, CSS, JavaScript, and more.</p>
+                <a href="resources.html">Learn More &rarr;</a>
+            </div>
+            <div class="info-card">
+                <h3>Trusted Resources</h3>
+                <p>Access curated lists of tools, libraries, and frameworks recommended by industry experts.</p>
+                <a href="resources.html">Discover Tools &rarr;</a>
+            </div>
+            <div class="info-card">
+                <h3>Community Support</h3>
+                <p>Connect with fellow learners and mentors. Share insights, ask questions, and grow together.</p>
+                <a href="contactus.html">Join Us &rarr;</a>
+            </div>
+        </section>
+
+        <section class="key-concepts-section">
+            <h2>Key Web Development Concepts</h2>
+            <p>Click on any concept to learn more about its core principles and importance in web development.</p>
+            <div class="concept-cards-grid">
+                <div class="concept-card">
+                    <h3>Front-End Development</h3>
+                    <p>Build the visible part of websites and web applications. Focuses on user interaction and
+                        experience.</p>
+                    <button class="learn-more-button" data-modal-target="frontend-modal">Learn More</button>
+                </div>
+
+                <div class="concept-card">
+                    <h3>Back-End Development</h3>
+                    <p>Develop the server-side logic, databases, and APIs that power the web's functionality.</p>
+                    <button class="learn-more-button" data-modal-target="backend-modal">Learn More</button>
+                </div>
+
+                <div class="concept-card">
+                    <h3>Web Security Fundamentals</h3>
+                    <p>Protect your web applications from common vulnerabilities and ensure user data safety.</p>
+                    <button class="learn-more-button" data-modal-target="security-modal">Learn More</button>
+                </div>
+
+
+            </div>
+        </section>
+        <section class="why-choose-us">
+            <h2>Why Choose CodeLearnWise?</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <h4>Up-to-Date Content</h4>
+                    <p>Our materials are constantly reviewed and updated to keep pace with the rapidly evolving web
+                        technologies.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Focus on Practicality</h4>
+                    <p>We emphasize hands-on learning, ensuring you gain skills directly applicable to real-world
+                        projects.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Clear and Concise</h4>
+                    <p>Complex topics are broken down into easy-to-understand modules, making learning accessible for
+                        everyone.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>©<span id="currentyear"></span> | ❤️⚓Silvia Castagnino⚓❤️ | CodeLearnWise</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <div id="modal-overlay" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-content" role="document">
+            <button class="close-modal-button" aria-label="Close modal dialog">&times;</button>
+            <h3 id="modal-title">Modal Title</h3>
+            <div id="modal-body">
+                <p>This is the detailed information for the selected concept.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
