@@ -113,6 +113,7 @@ nav ul.navigation li a {
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 5px;
     box-sizing: border-box;
+    font-weight: bold;
 }
 
 nav ul.navigation li a:hover,
@@ -204,7 +205,8 @@ section {
 .hero p {
     font-size: var(--fs-p);
     margin-bottom: 1.5rem;
-    color: var(--text-light);
+    color: black;
+
 }
 
 .cta-button {
