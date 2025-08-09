@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const tipsContainer = document.getElementById('dynamic-tips-container');
     const errorMessage = document.querySelector('.tips-section .error-message');
-    const jsonFilePath = 'data/tips.json'; // Ensure this path is correct
+    const jsonFilePath = 'data/tips.json';
 
     async function fetchTips() {
         try {
