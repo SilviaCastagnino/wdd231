@@ -430,11 +430,6 @@ main a {
     color: var(--secondary-color);
 }
 
-main a:hover {
-    color: var(--accent1-color);
-    text-decoration: none;
-}
-
 footer {
     background-color: var(--secondary-color);
     color: var(--text-light);
@@ -770,7 +765,7 @@ textarea {
 }
 
 .concept-card .learn-more-button:hover {
-    background-color: var(--accent2-color);
+    background-color: #B428A1;
 }
 
 .modal-overlay {
